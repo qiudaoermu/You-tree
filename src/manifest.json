@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "OctoTree - OctoTree without login",
+  "icons": {
+    "64": "icons/you-64.png",
+    "128": "icons/you-128.png",
+    "256": "icons/you-256.png"
+  },
+  "permissions": [
+    "https://api.github.com/*"
+  ],
+  "web_accessible_resources": [
+    "*.woff2", "*.png", "*.gif", "*.jpeg", "*.svg"
+  ],
+  "browser_action": {
+    "default_icon": "icons/you.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "version": "1.0",
+  "description": "File tree for GitHub, without login.",
+  "author": "EnixCoda",
+  "homepage_url": "https://github.com/EnixCoda/you"
+}
